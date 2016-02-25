@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LJ Designs | Graphics</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/nav-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script type="text/javascript" src="js/item_array.js"></script>
+
+  <script>
+    var graphics = [
+      { image: 'imgs/graphics/totoro_poster.png', itemtitle: 'My Neighbor Totoro Poster'},
+      { image: 'imgs/graphics/totoro_dvd.png' ,itemtitle: 'My Neighbor Totoro DVD Case'},
+      { image: 'imgs/graphics/bumpersticker.jpg', itemtitle: 'WPTSradio Sticker'},
+      { image: 'imgs/graphics/sw.jpg', itemtitle: 'WPTSradio Show Poster'},
+      { image: 'imgs/graphics/eden.png', itemtitle: 'Eden Logo'},
+      { image: 'imgs/graphics/bliss.png',  itemtitle: 'Bliss Logo'},
+      { image: 'imgs/graphics/wptssticker.jpg', itemtitle: 'WPTSradio Sticker'},
+      { image: 'imgs/graphics/pryse_final.jpg', itemtitle: 'Pryse Logo' },
+      { image: 'imgs/graphics/energy.png', itemtitle:'Energy Logo'},
+      { image: 'imgs/graphics/hardnacht.png', itemtitle: 'Hard Nacht IPA Label'},
+      { image: 'imgs/graphics/liveshow.jpg', itemtitle: 'WPTS Live Show Poster'},
+      { image: 'imgs/graphics/buddha.jpg',itemtitle: 'Buddha Berry Label' },
+      { image: 'imgs/graphics/struggle.png', itemtitle: 'WPTSradio T-Shirt'}
+    ];
+
+    $(document).ready(function(){
+      $.each(graphics, function( index, value ) {
+        $("#content").append("<div class='item-title' id='item"+ index +"'>"+ graphics[index].itemtitle +"</div>");
+        $("#content").append("<img class='item' src='"+ graphics[index].image +"'/>");
+        $("#side-nav-container").append("<a href='#item"+ index +"'><div id='#item"+ index +"link' class='side-nav-circle'></div>");
+      });
+    });
+
+    $(document).ready(function () {
+		$(document).on("scroll", onScroll);
+
+		$('a[href^="#"]').on('click', function (e) {
+			e.preventDefault();
+			$(document).off("scroll");
+
+			$('.side-nav-circle').each(function () {
+				$(this).removeClass('active');
+			})
+			$(this).addClass('active');
+
+			var target = this.hash;
+			$target = $(target);
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top+2
+			}, 500, 'swing', function () {
+				window.location.hash = target;
+				$(document).on("scroll", onScroll);
+			});
+		});
+	});
+
+	function onScroll(event){
+		var scrollPosition = $(document).scrollTop();
+		$('.side-nav-circle').each(function () {
+			var currentLink = $(this);
+			var refElement = $(currentLink.attr("href"));
+			if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+				$('.side-nav-circle').removeClass("active");
+				currentLink.addClass("active");
+			}
+			else{
+				currentLink.removeClass("active");
+			}
+		});
+	}
+  </script>
+
+</head>
+<body >
+  <!HEADER>
+
+    <!--<div ng-include="'header.html'"></div>-->
+
+    <div class="navbar">
+      <!logo>
+      <a href="index.html"><div class="nav-logo"><span>Lily </br> Nacht</span></div></a>
+          <a href="about.html"><div class="navlink nav-about"> About </div></a>
+          <a href="graphics.html"><div class="navlink nav-graphics"> Graphics </div></a>
+          <a href="web.html"><div class="navlink nav-web"> Web </div></a>
+          <a href="art.html"><div class="navlink nav-art"> Art </div></a>
+    </div><!end navbar>
+
+    <!CONTENT>
+    <div id="content">
+        <h2 class="page-header graphics">Graphics</h2>
+    </div><! end content>
+
+    <div id="side-nav">
+      <div id="side-nav-container"></div>
+    </div>
+
+
+</div> <! end container>
+</body>
+</html>

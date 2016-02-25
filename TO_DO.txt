@@ -1,0 +1,26 @@
+ give div max and min width
+  min == 300px
+
+img 100%
+box-sizing: border-box
+
+justify-content:
+<section id=“sweets”>
+<section class = “cookies”>
+<h2>…</h2>
+<img src… />
+<p>…</p>
+</section>
+//Repeat
+</section>
+
+#sweets {
+text-align: justify;
+}
+.cupcakes{
+box-sixing:border-box;
+width:30%;
+display:inline-block;
+}
+
+FLEX = https://css-tricks.com/snippets/css/a-guide-to-flexbox/

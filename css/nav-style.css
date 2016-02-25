@@ -1,0 +1,133 @@
+@font-face { font-family: Colab; src: url('../fonts/ColabThi.otf');}
+@font-face { font-family: MoonFlower; src: url('../fonts/Moon Flower.ttf'); }
+
+.navbar{
+  float: left;
+  width: 15%;
+  height: 100%;
+  position: fixed;
+}
+
+.nav-logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:100%;
+  background-color: #303330;
+  height: 30%;
+  line-height: 80%;
+  text-align: center;
+  font-family: MoonFlower;
+  color: white;
+  font-size: 4em;
+  -webkit-transition: all .8s ease; /* For Safari 3.1 to 6.0 */
+  transition: all .8s ease;
+}
+
+.nav-logo span{
+  resize: vertical;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.nav-logo:hover{
+  height: 35%;
+}
+
+.navlink{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    width: 100%;
+    height: 17.5%;
+    font-family: Colab;
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 2%;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-transition: width .8s; /* For Safari 3.1 to 6.0 */
+    transition: width .8s;
+    line-height: 17.5%;
+}
+
+.navlink span{
+  resize: vertical;
+}
+
+.navlink:hover{
+  width: 110%;
+}
+
+.navlink.nav-about{
+  background-color: #b77e99;
+}
+
+.navlink.nav-graphics{
+  background-color: #6fa8ae;
+}
+
+.navlink.nav-web{
+  background-color: #256c5c;
+}
+
+.navlink.nav-art{
+  background-color: #412e49 ;
+}
+
+
+h2.nav-title{
+  font-family: Colab;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+
+/* PAGE NAV */
+
+#side-nav{
+  position: fixed;
+  display: flex;
+  align-items: center;
+ justify-content: center;
+  width:10%;
+  height: 100%;
+  margin-left:90%;
+  padding: 5% 0;
+}
+#side-nav-container{
+   width: 100%;
+   padding: 10% 0;
+}
+.circle-container{
+  width: 100%;
+}
+.side-nav-circle{
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #303330;
+  margin: 22% auto 22% auto;
+  -webkit-transition: all .8s; /* For Safari 3.1 to 6.0 */
+  transition: all .7s;
+}
+
+.side-nav-circle:hover{
+  width: 15px;
+  height: 15px;
+}
+
+.side-nav-circle.active{
+  width: 20px;
+  height: 20px;
+}
+
+
+.side-nav-title{
+  display: inline-block;
+  margin-right: 10px;
+}

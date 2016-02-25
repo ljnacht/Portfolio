@@ -1,0 +1,102 @@
+@font-face { font-family: MoonFlower; src: url('../fonts/Moon Flower.ttf'); }
+@font-face { font-family: MoonFlowerBold; src: url('../fonts/Moon Flower Bold.ttf'); }
+@font-face { font-family: Colab; src: url('../fonts/ColabThi.otf');}
+
+#home-logo{
+  flex-basis: auto;
+  width: 10%;
+  min-width: 95px;
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+/*CONTENT*/
+#content{
+  float: left;
+  width: 75%;
+  padding: 20px;
+  margin-left: 15%;
+  text-align: center;
+}
+.page-header{
+  font-family: MoonFlowerBold;
+  font-size: 4em;
+  margin-bottom: -50px;
+  text-align: center;;
+  border:none;
+}
+
+.page-header.graphics{
+  color: #6fa8ae;
+}
+.page-header.web{
+  color: #256c5c;
+}
+.page-header.art{
+  color: #412e49;
+}
+.page-header.about{
+  color: #b77e99;
+  display: block;
+  width: 90%;
+}
+
+.item {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 20px;
+  -webkit-box-shadow: -1px 7px 21px -2px rgba(173,166,173,1);
+  -moz-box-shadow: -1px 7px 21px -2px rgba(173,166,173,1);
+  box-shadow: -1px 7px 21px -2px rgba(173,166,173,1);
+}
+
+.item-title{
+  width: 100%;
+  text-align: center;
+  font-family: Colab;
+  font-size: 1.7em;
+  margin-top: 110px;
+}
+
+/*ABOUT*/
+.about-div{
+  display: block;
+  padding-left: 45%;
+}
+
+.icon-div{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 90%;
+}
+
+h3.info{
+  color: #256c5c;
+  display: inline-block;
+  font-family: MoonFlowerBold;
+  font-size: 35px;
+}
+
+.icon{
+  margin-top: -15px;
+}
+
+p{
+  font-family: Helvetica;
+  font-size: 18px;
+  line-height: 180%;
+  margin-right:20%;
+  text-align: left;
+  padding-top: 10px;
+}
+.me{
+  display:block;
+  float: left;
+  width: 30%;
+  height: 30%;
+  margin-top: 1%;
+  margin-right: 2%;
+  padding-left: 25px;
+}
