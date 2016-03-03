@@ -20,43 +20,32 @@
 
 </head>
 <body>
+  <div class="home-content">
 
-<div class="container" style="text-align: center;">
-  <! LOGO ROW>
-  <div class="row row-centered">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-      <img id ="home-logo" src="./imgs/logo.gif" alt="Logo"/>
+    <div class="logo-container">
+      <div id="home-logo">Lily</br>Nacht</div>
     </div>
-  </div>
 
-  <! FIRST ROW>
-  <div class="row no-gutters row-centered">
-    <! lg & md & sm>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="left-content">
       <!about>
-      <input type="image" src="./imgs/button_about.gif" onclick="changePage('about.html')"
+      <input type="image" class="left-btn" src="./imgs/button_about.gif" onclick="changePage('about.html')"
         onmouseover="this.src='./imgs/button_about_hover.gif'" onmouseout="this.src='./imgs/button_about.gif'"/>
-      <!graphics>
-      <input type="image" src="./imgs/button_graphics.gif" onclick="changePage('graphics.html')"
-        onmouseover="this.src='./imgs/button_graphics_hover.gif'" onmouseout="this.src='./imgs/button_graphics.gif'"/>
-    </div>
-
-  </div>
-
-  <!SECOND ROW>
-  <div class="row no-gutters">
-    <! lg & md & sm>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <input type="image" src="./imgs/button_web.gif" onclick="changePage('web.html')"
+      <!web>
+      <input type="image" class="left-btn" src="./imgs/button_web.gif" onclick="changePage('web.html')"
         onmouseover="this.src='./imgs/button_web_hover.gif'" onmouseout="this.src='./imgs/button_web.gif'"/>
-      <input type="image" src="./imgs/button_art.gif" onclick="changePage('art.html')"
+    </div><!end left>
+
+    <div class="right-content">
+      <!graphics>
+      <input type="image" class="right-btn" src="./imgs/button_graphics.gif" onclick="changePage('graphics.html')"
+        onmouseover="this.src='./imgs/button_graphics_hover.gif'" onmouseout="this.src='./imgs/button_graphics.gif'"/>
+      <!art>
+      <input type="image" class="right-btn" src="./imgs/button_art.gif" onclick="changePage('art.html')"
         onmouseover="this.src='./imgs/button_art_hover.gif'" onmouseout="this.src='./imgs/button_art.gif'"/>
-    </div>
-    <!xs>
+    </div><!end right>
 
-  </div>
 
-</div> <! end container>
+  </div><!end content>
 
 </body>
 </html>
