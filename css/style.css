@@ -38,9 +38,9 @@
   margin: 0 auto;
   width: 50%;
   margin-top: 20px;
-  -webkit-box-shadow: -1px 7px 21px -2px rgba(173,166,173,1);
-  -moz-box-shadow: -1px 7px 21px -2px rgba(173,166,173,1);
-  box-shadow: -1px 7px 21px -2px rgba(173,166,173,1);
+  -webkit-box-shadow: 1px -2px 5px 0px rgba(0,0,0,0.16);
+  -moz-box-shadow: 1px -2px 5px 0px rgba(0,0,0,0.16);
+  box-shadow: 1px -2px 5px 0px rgba(0,0,0,0.16);
 }
 
 .item-title{
@@ -49,29 +49,52 @@
   font-family: Colab;
   font-size: 1.7em;
   margin-top: 110px;
+  margin-bottom: 20px;
 }
 
-/*HOME*/
+.livelink{
+  font-family: Colab;
+  color: white;
+  background: #256c5c;
+  font-size: 1.3em;
+  text-decoration: none;
+  margin-top: 50px;
+  padding: 10px;
+  -webkit-transition: all .8s ease; /* For Safari 3.1 to 6.0 */
+  transition: all .8s ease;
+}
+
+.livelink:hover{
+  color:white;
+  padding: 15px;
+}
+
+.livelink:active{
+  color:white;
+  text-decoration: none;
+}
+
+
+            /*HOME*/
+/******************************/
 .home-content{
     width: 100%;
-    display: flex;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo-container{
   width: 100%;
+  clear:both;
+  text-align: center;
   display: block;
 }
 
 #home-logo{
-  width: 100px;
-  height: 100px;
-  border-radius:100%;
-  padding: 50px;
-  marin: 0 auto;
-  background-color: #303330;
-  color: white;
-  font-family: MoonFlower;
-  font-size: 25px;
+  width: 8%;
+  margin: 3% 0px;
+  text-align: center;
 }
 .left-content{
   float: left;
@@ -111,6 +134,10 @@
   width: 90%;
 }
 
+.icon-div-mobile{
+  display: none;
+}
+
 h3.info{
   color: #256c5c;
   display: inline-block;
@@ -124,7 +151,7 @@ h3.info{
 
 p{
   font-family: Helvetica;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 180%;
   margin-right:20%;
   text-align: left;
@@ -138,4 +165,70 @@ p{
   margin-top: 1%;
   margin-right: 2%;
   padding-left: 25px;
+}
+
+            /* MOBILE */
+/********************************/
+@media (max-width: 768px) {
+  .home-content{
+    padding-top: 10%;
+  }
+
+  #home-logo{
+    width: 20% !important;
+  }
+
+  .left-btn{
+    width: 70%;
+    margin-left: 30%;
+  }
+
+  .right-btn{
+    width: 70%;
+    margin-right: 30%;
+  }
+
+  /********* CONTENT *********/
+  #content{
+    width: 100%;
+    float: none;
+    margin: 0px;
+    padding-top: 100px;
+  }
+
+  .item{
+    width: 70%;
+  }
+
+  .page-header{
+    margin-bottom: -90px;
+  }
+
+  /**ABOUT ***/
+  .icon-div{
+    display: none;
+  }
+
+  .icon-div-mobile{
+    display: block;
+    width: 100%;
+    margin-top: -10px;
+  }
+
+  .info{
+    font-family: Colab;
+  }
+  .page-header.about{
+    margin: 0px;
+    margin-top: 20px;
+  }
+
+  .me{
+    float: none;
+    width: 100%;
+    padding: 0px;
+    margin-top: 15px;
+  }
+
+
 }

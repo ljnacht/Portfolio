@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Lily Nacht | Graphics</title>
+  <title>Lily Nacht | Art</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -12,6 +12,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   <script type="text/javascript" src="js/item_array.js"></script>
+  <link rel="icon" type="image/png" href="imgs/favicon.png">
 
   <script>
     var items = [
@@ -71,22 +72,57 @@
 			}
 		});
 	}
-  </script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
 </head>
 <body >
-  <!HEADER>
+<!HEADER>
 
-    <!--<div ng-include="'header.html'"></div>-->
+<!--<div ng-include="'header.html'"></div>-->
 
-    <div class="navbar">
-      <!logo>
-      <a href="index.html"><div class="nav-logo"><span>Lily </br> Nacht</span></div></a>
-          <a href="about.html"><div class="navlink nav-about"> About </div></a>
-          <a href="graphics.html"><div class="navlink nav-graphics"> Graphics </div></a>
-          <a href="web.html"><div class="navlink nav-web"> Web </div></a>
-          <a href="art.html"><div class="navlink nav-art"> Art </div></a>
-    </div><!end navbar>
+<div class="navbar">
+  <!logo>
+  <a href="index.html" class="nav-logo"><span>Lily </br> Nacht</span></a>
+      <a href="about.html" class="navlink nav-about"> About</a>
+      <a href="graphics.html" class="navlink nav-graphics"> Graphics</a>
+      <a href="web.html" class="navlink nav-web"> Web</a>
+      <a href="art.html" class="navlink nav-art"> Art</a>
+
+      <!MOBILE MENU>
+      <div class="mobile-container">
+        <div class="mobile-logo">Lily</br>Nacht</div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn" style="background: url(imgs/menu-btn.png)"></button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="web.html">Web</a>
+              <a href="graphics.html">Graphics</a>
+              <a href="art.html">Art</a>
+            </div>
+        </div>
+      </div>
+</div><!end navbar>
 
     <!CONTENT>
     <div id="content">

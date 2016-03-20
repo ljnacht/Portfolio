@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Lily Nacht | Graphics</title>
+  <title>Lily Nacht | Web</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -12,19 +12,26 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   <script type="text/javascript" src="js/item_array.js"></script>
+  <link rel="icon" type="image/png" href="imgs/favicon.png">
 
   <script>
     var items =  [
-    { image: './imgs/web/crochet.jpg', itemtitle: 'Crochet-o-pedia Website'},
-    { image: './imgs/web/nami.gif', itemtitle: 'Nami Home and About Page'},
-    { image: './imgs/web/wvu.gif',  itemtitle: 'Live@WVU Home and Contact Page'},
-    { image: './imgs/web/pryse.gif', itemtitle: 'PRYSE Home and Contact Page'},
-    { image: './imgs/web/utique.jpg', itemtitle: 'Utique Landing Page'}
+      { image: './imgs/web/webworx.png', itemtitle: 'Webworx', link: true, url:"https://tribdesigns.com"},
+      { image: './imgs/web/pub.png', itemtitle: 'Pub Theme', link: true, url:"http://pub.mywebworxplus.com"},
+      { image: './imgs/web/eden.png', itemtitle: 'Yoga Studio Theme', link: true, url:"http://eden.mywebworxplus.com/"},
+      { image: './imgs/web/crochet.jpg', itemtitle: 'Crochet-o-pedia Website', link: true, url:"crochet-o-pedia/index.html"},
+      { image: './imgs/web/nami.gif', itemtitle: 'Nami Home and About Page', link: false},
+      { image: './imgs/web/wvu.gif',  itemtitle: 'Live@WVU Home and Contact Page', link: false},
+      { image: './imgs/web/pryse.gif', itemtitle: 'PRYSE Home and Contact Page', link: false},
+      { image: './imgs/web/utique.jpg', itemtitle: 'Utique Landing Page', link: false}
     ];
 
     $(document).ready(function(){
       $.each(items, function( index, value ) {
         $("#content").append("<div class='item-title' id='item"+ index +"'>"+ items[index].itemtitle +"</div>");
+        if(items[index].link){
+            $("#content").append("<a href='"+items[index].url+"' target='blank_target' class='livelink'><img src='imgs/link.png' width='30px' alt='linkimg'/>Live Link</a>");
+        }
         $("#content").append("<img class='item' src='"+ items[index].image +"'/>");
         $("#side-nav-container").append("<div class='circle-container'><a href='#item"+ index +"'><div id='#item"+ index +"link' class='side-nav-circle'></div></a></div>");
       });
@@ -67,22 +74,57 @@
 			}
 		});
 	}
-  </script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
 </head>
 <body >
-  <!HEADER>
+<!HEADER>
 
-    <!--<div ng-include="'header.html'"></div>-->
+<!--<div ng-include="'header.html'"></div>-->
 
-    <div class="navbar">
-      <!logo>
-      <a href="index.html"><div class="nav-logo"><span>Lily </br> Nacht</span></div></a>
-          <a href="about.html"><div class="navlink nav-about"> About </div></a>
-          <a href="graphics.html"><div class="navlink nav-graphics"> Graphics </div></a>
-          <a href="web.html"><div class="navlink nav-web"> Web </div></a>
-          <a href="art.html"><div class="navlink nav-art"> Art </div></a>
-    </div><!end navbar>
+<div class="navbar">
+  <!logo>
+  <a href="index.html" class="nav-logo"><span>Lily </br> Nacht</span></a>
+      <a href="about.html" class="navlink nav-about"> About</a>
+      <a href="graphics.html" class="navlink nav-graphics"> Graphics</a>
+      <a href="web.html" class="navlink nav-web"> Web</a>
+      <a href="art.html" class="navlink nav-art"> Art</a>
+
+      <!MOBILE MENU>
+      <div class="mobile-container">
+        <div class="mobile-logo">Lily</br>Nacht</div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn" style="background: url(imgs/menu-btn.png)"></button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="web.html">Web</a>
+              <a href="graphics.html">Graphics</a>
+              <a href="art.html">Art</a>
+            </div>
+        </div>
+      </div>
+</div><!end navbar>
 
     <!CONTENT>
     <div id="content">

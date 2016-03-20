@@ -11,6 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <link rel="icon" type="image/png" href="imgs/favicon.png">
   <script>
   function changePage(pageName) {
     var newUrl =  pageName;
@@ -21,28 +22,28 @@
 </head>
 <body>
   <div class="home-content">
-
     <div class="logo-container">
-      <div id="home-logo">Lily</br>Nacht</div>
+      <img src="imgs/logo.png" id="home-logo" alt="logo"/>
     </div>
+    <div>
+      <div class="left-content">
+        <!about>
+        <input type="image" class="left-btn" src="./imgs/button_about.gif" onclick="changePage('about.html')"
+          onmouseover="this.src='./imgs/button_about_hover.gif'" onmouseout="this.src='./imgs/button_about.gif'"/>
+        <!web>
+        <input type="image" class="left-btn" src="./imgs/button_web.gif" onclick="changePage('web.html')"
+          onmouseover="this.src='./imgs/button_web_hover.gif'" onmouseout="this.src='./imgs/button_web.gif'"/>
+      </div><!end left>
 
-    <div class="left-content">
-      <!about>
-      <input type="image" class="left-btn" src="./imgs/button_about.gif" onclick="changePage('about.html')"
-        onmouseover="this.src='./imgs/button_about_hover.gif'" onmouseout="this.src='./imgs/button_about.gif'"/>
-      <!web>
-      <input type="image" class="left-btn" src="./imgs/button_web.gif" onclick="changePage('web.html')"
-        onmouseover="this.src='./imgs/button_web_hover.gif'" onmouseout="this.src='./imgs/button_web.gif'"/>
-    </div><!end left>
-
-    <div class="right-content">
-      <!graphics>
-      <input type="image" class="right-btn" src="./imgs/button_graphics.gif" onclick="changePage('graphics.html')"
-        onmouseover="this.src='./imgs/button_graphics_hover.gif'" onmouseout="this.src='./imgs/button_graphics.gif'"/>
-      <!art>
-      <input type="image" class="right-btn" src="./imgs/button_art.gif" onclick="changePage('art.html')"
-        onmouseover="this.src='./imgs/button_art_hover.gif'" onmouseout="this.src='./imgs/button_art.gif'"/>
-    </div><!end right>
+      <div class="right-content">
+        <!graphics>
+        <input type="image" class="right-btn" src="./imgs/button_graphics.gif" onclick="changePage('graphics.html')"
+          onmouseover="this.src='./imgs/button_graphics_hover.gif'" onmouseout="this.src='./imgs/button_graphics.gif'"/>
+        <!art>
+        <input type="image" class="right-btn" src="./imgs/button_art.gif" onclick="changePage('art.html')"
+          onmouseover="this.src='./imgs/button_art_hover.gif'" onmouseout="this.src='./imgs/button_art.gif'"/>
+      </div><!end right>
+    </div>
 
 
   </div><!end content>
